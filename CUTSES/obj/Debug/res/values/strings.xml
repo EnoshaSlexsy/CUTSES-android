@@ -1,1 +1,1 @@
-<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">CUTSES</string></resources>
+<resources><string name="hello">Hello World, Click Me!</string><string name="app_name">CUTSES</string><string name="theme">Choose theme</string><string name="themeFirst">First name</string><string name="themeSecond">Second name</string><string name="themeThird">Third name</string></resources>
