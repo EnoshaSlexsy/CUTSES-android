@@ -65,6 +65,7 @@
     <Compile Include="Additional\structQA.cs" />
     <Compile Include="libFunc\functionTester.cs" />
     <Compile Include="libFunc\libFileReading.cs" />
+    <Compile Include="libFunc\functionResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

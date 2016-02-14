@@ -3,11 +3,6 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/myButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hello" />
     <RadioGroup
         android:minWidth="25px"
         android:minHeight="25px"
@@ -26,9 +21,9 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:checked="true"
             android:text="Answer1"
-            android:id="@+id/buttonRadioAnswer1" />
+            android:id="@+id/buttonRadioAnswer1"
+            android:layout_marginLeft="0.0dp" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,6 +55,11 @@
         android:id="@+id/buttonNext"
         tools:text="@string/buttonNext"
         tools:visibility="visible" />
+    <Button
+        android:text="Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonFinish" />
     <TextView xmlns:tools="http://schemas.android.com/tools"
         android:text="QuestionCounter"
         android:textAppearance="?android:attr/textAppearanceMedium"
@@ -68,5 +68,6 @@
         android:id="@+id/textQuestionCounter"
         android:gravity="bottom"
         android:layout_gravity="center"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        android:layout_marginTop="0.0dp" />
 </LinearLayout>

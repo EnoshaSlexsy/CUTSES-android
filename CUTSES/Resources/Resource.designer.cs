@@ -1195,23 +1195,26 @@ namespace CUTSES
 			// aapt resource value: 0x7f0c0050
 			public const int buttonAccept = 2131492944;
 			
-			// aapt resource value: 0x7f0c005e
-			public const int buttonNext = 2131492958;
+			// aapt resource value: 0x7f0c0061
+			public const int buttonFinish = 2131492961;
 			
-			// aapt resource value: 0x7f0c005d
-			public const int buttonPrev = 2131492957;
+			// aapt resource value: 0x7f0c0060
+			public const int buttonNext = 2131492960;
 			
-			// aapt resource value: 0x7f0c0059
-			public const int buttonRadioAnswer1 = 2131492953;
-			
-			// aapt resource value: 0x7f0c005a
-			public const int buttonRadioAnswer2 = 2131492954;
+			// aapt resource value: 0x7f0c005f
+			public const int buttonPrev = 2131492959;
 			
 			// aapt resource value: 0x7f0c005b
-			public const int buttonRadioAnswer3 = 2131492955;
+			public const int buttonRadioAnswer1 = 2131492955;
 			
 			// aapt resource value: 0x7f0c005c
-			public const int buttonRadioAnswer4 = 2131492956;
+			public const int buttonRadioAnswer2 = 2131492956;
+			
+			// aapt resource value: 0x7f0c005d
+			public const int buttonRadioAnswer3 = 2131492957;
+			
+			// aapt resource value: 0x7f0c005e
+			public const int buttonRadioAnswer4 = 2131492958;
 			
 			// aapt resource value: 0x7f0c0022
 			public const int buyButton = 2131492898;
@@ -1258,8 +1261,8 @@ namespace CUTSES
 			// aapt resource value: 0x7f0c002a
 			public const int grayscale = 2131492906;
 			
-			// aapt resource value: 0x7f0c0057
-			public const int groupAnswer = 2131492951;
+			// aapt resource value: 0x7f0c0059
+			public const int groupAnswer = 2131492953;
 			
 			// aapt resource value: 0x7f0c001d
 			public const int holo_dark = 2131492893;
@@ -1291,8 +1294,14 @@ namespace CUTSES
 			// aapt resource value: 0x7f0c004f
 			public const int inputPassword = 2131492943;
 			
-			// aapt resource value: 0x7f0c0060
-			public const int labelTheme = 2131492960;
+			// aapt resource value: 0x7f0c0058
+			public const int labelAnswer = 2131492952;
+			
+			// aapt resource value: 0x7f0c0063
+			public const int labelTheme = 2131492963;
+			
+			// aapt resource value: 0x7f0c0057
+			public const int linearLayout = 2131492951;
 			
 			// aapt resource value: 0x7f0c0006
 			public const int listMode = 2131492870;
@@ -1414,17 +1423,17 @@ namespace CUTSES
 			// aapt resource value: 0x7f0c001c
 			public const int terrain = 2131492892;
 			
-			// aapt resource value: 0x7f0c0058
-			public const int textQuestion = 2131492952;
-			
-			// aapt resource value: 0x7f0c005f
-			public const int textQuestionCounter = 2131492959;
-			
-			// aapt resource value: 0x7f0c0061
-			public const int themeFirst = 2131492961;
+			// aapt resource value: 0x7f0c005a
+			public const int textQuestion = 2131492954;
 			
 			// aapt resource value: 0x7f0c0062
-			public const int themeSecond = 2131492962;
+			public const int textQuestionCounter = 2131492962;
+			
+			// aapt resource value: 0x7f0c0064
+			public const int themeFirst = 2131492964;
+			
+			// aapt resource value: 0x7f0c0065
+			public const int themeSecond = 2131492965;
 			
 			// aapt resource value: 0x7f0c003d
 			public const int title = 2131492925;
@@ -1645,6 +1654,12 @@ namespace CUTSES
 			
 			// aapt resource value: 0x7f06002e
 			public const int app_name = 2131099694;
+			
+			// aapt resource value: 0x7f060033
+			public const int buttonNext = 2131099699;
+			
+			// aapt resource value: 0x7f060034
+			public const int buttonPrev = 2131099700;
 			
 			// aapt resource value: 0x7f06001e
 			public const int common_google_play_services_enable_button = 2131099678;

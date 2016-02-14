@@ -9,8 +9,8 @@ namespace CUTSES
 {
 	public class functionTester
 	{
-		libFileReading file;
-		List<structQA> arreyQA;
+		/*libFileReading file;
+		List<structQA> arreyQA;*/
 
 		public functionTester ( )
 		{
@@ -26,16 +26,15 @@ namespace CUTSES
 					userAnswer.Add (-1);
 				}
 			} else if (testID == themes[1].Id) {
-				testArreyQA = file.fileLoad ("themeFirst");
+				/*testArreyQA = file.fileLoad ("themeFirst");*/
 			}
 			return testArreyQA;
 		}
-		public void refreshTester ( TextView question, List<RadioButton> radioArrey, structQA QA )
+		public void refreshTester ( TextView question, List<RadioButton> radioArrey, structQA QA, RadioGroup groupAnswer )
 		{
-
+			groupAnswer.ClearCheck ();
 			question.Text = QA.question;
 			for (int counter = 0; counter < radioArrey.Count; counter++) {
-				radioArrey [counter].Checked = false;
 				radioArrey [counter].Text = QA.answer [counter];
 			}
 		}
@@ -51,6 +50,10 @@ namespace CUTSES
 			if (answer [testNumber] >= 0) {
 				radioArrey [answer[testNumber]].Checked = true;
 			}
+		}
+		public void questionCounterUpdate ( int questionCurrent, int questionCount, TextView questionCounter )
+		{
+			questionCounter.Text = "#" + (questionCurrent + 1).ToString() + "/" + (questionCount).ToString();
 		}
 		public void buttonUpdate ( Button btnNext, Button btnPrev, int qCurrent, int qCount ){
 			if (qCurrent == 0) {

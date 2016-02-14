@@ -26,7 +26,6 @@ namespace CUTSES
 			// Login layout settings
 			layoutLoginInit();
 
-
 		}
 		public  void layoutLoginInit()
 		{
@@ -62,28 +61,41 @@ namespace CUTSES
 			SetContentView(Resource.Layout.TestingPage);
 			Button buttonNext = FindViewById<Button> (Resource.Id.buttonNext);
 			Button buttonPrev = FindViewById<Button> (Resource.Id.buttonPrev);
+			Button buttonFinish = FindViewById<Button> (Resource.Id.buttonFinish);
 			TextView textQuestion = FindViewById<TextView> (Resource.Id.textQuestion);
+			TextView questionCounter = FindViewById<TextView> (Resource.Id.textQuestionCounter);
+			RadioGroup groupAnswer = FindViewById<RadioGroup> (Resource.Id.groupAnswer);
 
 			radioArrey.Add (FindViewById<RadioButton> (Resource.Id.buttonRadioAnswer1));
 			radioArrey.Add (FindViewById<RadioButton> (Resource.Id.buttonRadioAnswer2));
 			radioArrey.Add (FindViewById<RadioButton> (Resource.Id.buttonRadioAnswer3));
 			radioArrey.Add (FindViewById<RadioButton> (Resource.Id.buttonRadioAnswer4));
 
-			tester.refreshTester (textQuestion, radioArrey, mainQA[questionCurrent]);
+			tester.refreshTester ( textQuestion, radioArrey, mainQA[questionCurrent], groupAnswer );
+			tester.questionCounterUpdate ( questionCurrent, questionCount, questionCounter);
 			tester.buttonUpdate ( buttonNext, buttonPrev, questionCurrent, questionCount);
 			buttonNext.Click += delegate {
 				tester.saveResult( radioArrey, userAnswer, questionCurrent );
 				questionCurrent++;
-				tester.refreshTester (textQuestion, radioArrey, mainQA[questionCurrent]);
-				tester.loadResult ( radioArrey, userAnswer, questionCurrent );
+				tester.refreshTester ( textQuestion, radioArrey, mainQA[questionCurrent], groupAnswer );
 				tester.buttonUpdate( buttonNext, buttonPrev, questionCurrent, questionCount );
+				tester.questionCounterUpdate ( questionCurrent, questionCount, questionCounter);
+				tester.loadResult ( radioArrey, userAnswer, questionCurrent );
 			};
-			buttonPrev.Click += delegate {
+  			buttonPrev.Click += delegate {
 				tester.saveResult( radioArrey, userAnswer, questionCurrent );
 				questionCurrent--;
-				tester.refreshTester (textQuestion, radioArrey, mainQA[questionCurrent]);
-				tester.loadResult ( radioArrey, userAnswer, questionCurrent );
+				tester.refreshTester ( textQuestion, radioArrey, mainQA[questionCurrent], groupAnswer );
 				tester.buttonUpdate( buttonNext, buttonPrev, questionCurrent, questionCount );
+				tester.questionCounterUpdate ( questionCurrent, questionCount, questionCounter);
+				tester.loadResult ( radioArrey, userAnswer, questionCurrent );
+			};
+			buttonFinish.Click += delegate {
+				SetContentView(Resource.Layout.Result);
+				TextView labelAnswer = FindViewById<TextView>(Resource.Id.labelAnswer);
+				labelAnswer.Text = userName;
+				functionResult result = new functionResult(mainQA, userAnswer, labelAnswer);
+
 			};
 		}
 	}

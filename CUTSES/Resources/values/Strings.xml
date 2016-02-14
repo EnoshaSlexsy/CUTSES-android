@@ -6,4 +6,6 @@
 	<string name="themeFirst">First name</string>
 	<string name="themeSecond">Second name</string>
 	<string name="themeThird">Third name</string>
+	<string name="buttonNext">Next</string>
+	<string name="buttonPrev">Prev</string>
 </resources>
